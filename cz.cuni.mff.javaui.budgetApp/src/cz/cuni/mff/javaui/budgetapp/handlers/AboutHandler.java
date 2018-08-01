@@ -9,4 +9,4 @@ public class AboutHandler {
 	public void execute(Shell shell) {
 		MessageDialog.openInformation(shell, "About", "Eclipse 4 RCP Application");
 	}
-}
+} 
