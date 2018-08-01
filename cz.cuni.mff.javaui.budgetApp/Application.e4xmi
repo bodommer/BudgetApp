@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_c3AF0MjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.application" bindingContexts="_c3AF2cjYEeSyMNYR5xypkQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_c3AF0cjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.window.main" label="Budget Manager">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_OK6JgJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.main" horizontal="true">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_xqpRMJW1Eeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.0">
+        <children xsi:type="basic:PartStack" xmi:id="_2x10gJW1Eeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.1">
+          <children xsi:type="basic:Part" xmi:id="_Z3zOcJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.periods" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.PeriodsPart" label="Periods"/>
+        </children>
+      </children>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_RW3IIJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.1">
+        <children xsi:type="basic:PartStack" xmi:id="_-2vxAJWzEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.0">
+          <children xsi:type="basic:Part" xmi:id="_TNergJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.userinfo" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.UserInformationPart" label="User information"/>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_QM4BQJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.recorddetails">
+          <children xsi:type="basic:Part" xmi:id="_UOtfAJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.recorddata" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.RecordInformationPart" label="Record Information">
+            <toolbar xmi:id="_1EBecJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.0">
+              <children xsi:type="menu:HandledToolItem" xmi:id="_1dLlUJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.addrecord" label="Add record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/open_in_app.png" command="_q4NWQJXEEeipSKs-bvEWkA"/>
+            </toolbar>
+          </children>
+          <children xsi:type="basic:Part" xmi:id="_Tw_BMJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.graph" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.GraphPart" label="Graph"/>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_sOCVMJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.menu.0"/>
+    <trimBars xmi:id="_8tHiUJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_9STTAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.1">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_9xbfAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.0" command="_jJcTwJXEEeipSKs-bvEWkA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_vLJVoJXFEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.newUserCommand" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.NewUserHandler" command="_aR5rUJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_VKxukJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.openuserhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.OpenUserHandler" command="_a5t5QJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_X1VQUJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.addperiodhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.AddPeriodHandler" command="_jJcTwJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_auCi0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.editperiodhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.EditPeriodHandler" command="_k4U3cJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_dykq0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.deleteperiodhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.DeletePeriodHandler" command="_mI3SQJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_gYUlEJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.edituserhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.EditUserHandler" command="_ocQ4QJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_jlXv4JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.addrecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.AddRecordHandler" command="_q4NWQJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_mtcUEJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.editrecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.EditRecordHandler" command="_sZI9gJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_pMtL0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.deleterecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.DeleteRecordHandler" command="_ujCpQJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_rzfA0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.showgraphhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.ShowGraphHandler" command="_wZGzAJXEEeipSKs-bvEWkA"/>
+  <rootContext xmi:id="_c3AF2cjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_c3AF2sjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_c3AF28jYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_aR5rUJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.newuser" commandName="New User"/>
+  <commands xmi:id="_a5t5QJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.openuser" commandName="Open User"/>
+  <commands xmi:id="_g3yaMJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.exitcommand" commandName="Exit Command"/>
+  <commands xmi:id="_jJcTwJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.addperiod" commandName="Add Period"/>
+  <commands xmi:id="_k4U3cJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.editperiod" commandName="Edit Period"/>
+  <commands xmi:id="_mI3SQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.deleteperiod" commandName="Delete Period"/>
+  <commands xmi:id="_ocQ4QJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.edituser" commandName="Edit User"/>
+  <commands xmi:id="_q4NWQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.addrecord" commandName="Add Record"/>
+  <commands xmi:id="_sZI9gJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.editrecord" commandName="Edit Record"/>
+  <commands xmi:id="_ujCpQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.deleterecord" commandName="Delete Record"/>
+  <commands xmi:id="_wZGzAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.showgraph" commandName="Show Graph"/>
+  <addons xmi:id="_c3AF0sjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_c3AF08jYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_c3AF1MjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_c3AF1cjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_c3AF1sjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_c3AF18jYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_c3AF2MjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
