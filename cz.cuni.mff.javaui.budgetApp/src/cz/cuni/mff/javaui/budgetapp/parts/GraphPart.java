@@ -22,11 +22,10 @@ public class GraphPart {
 		
 		canvas = new Canvas(parent,SWT.NO_REDRAW_RESIZE);
 		
-		Color color = new Color(Display.getCurrent(), 100, 100, 100);
+		Color color = new Color(Display.getCurrent(), 5,5,5);
 		
 		canvas.setBackground(color);
 		GridData gd = new GridData(SWT.FILL, SWT.FILL, true, true);
 		canvas.setLayoutData(gd);
-		System.out.println("ASSIGNED");
 	}
 }

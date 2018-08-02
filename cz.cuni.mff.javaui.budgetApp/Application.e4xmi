@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_c3AF0MjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.application" bindingContexts="_c3AF2cjYEeSyMNYR5xypkQ">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_c3AF0cjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.window.main" label="Budget Manager">
-    <children xsi:type="basic:PartSashContainer" xmi:id="_OK6JgJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.main" horizontal="true">
-      <children xsi:type="basic:PartSashContainer" xmi:id="_xqpRMJW1Eeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.0">
-        <children xsi:type="basic:PartStack" xmi:id="_2x10gJW1Eeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.1">
-          <children xsi:type="basic:Part" xmi:id="_Z3zOcJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.periods" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.PeriodsPart" label="Periods"/>
-        </children>
-      </children>
-      <children xsi:type="basic:PartSashContainer" xmi:id="_RW3IIJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.1">
-        <children xsi:type="basic:PartStack" xmi:id="_-2vxAJWzEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.0">
-          <children xsi:type="basic:Part" xmi:id="_TNergJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.userinfo" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.UserInformationPart" label="User information"/>
-        </children>
-        <children xsi:type="basic:PartStack" xmi:id="_QM4BQJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.recorddetails">
-          <children xsi:type="basic:Part" xmi:id="_UOtfAJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.recorddata" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.RecordInformationPart" label="Record Information">
-            <toolbar xmi:id="_1EBecJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.0">
-              <children xsi:type="menu:HandledToolItem" xmi:id="_1dLlUJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.addrecord" label="Add record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/open_in_app.png" command="_q4NWQJXEEeipSKs-bvEWkA"/>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_OK6JgJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.main" containerData="3000" horizontal="true">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_xqpRMJW1Eeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.0" containerData="3000">
+        <children xsi:type="basic:PartStack" xmi:id="_2x10gJW1Eeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.1" containerData="5000">
+          <children xsi:type="basic:Part" xmi:id="_Z3zOcJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.periods" containerData="5000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.PeriodsPart" label="Periods">
+            <toolbar xmi:id="_Uy7i8JZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.2">
+              <children xsi:type="menu:HandledToolItem" xmi:id="_WEAJQJZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.addperiod" label="Add period" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/iu_add.png" command="_jJcTwJXEEeipSKs-bvEWkA"/>
             </toolbar>
           </children>
-          <children xsi:type="basic:Part" xmi:id="_Tw_BMJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.graph" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.GraphPart" label="Graph"/>
+        </children>
+      </children>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_RW3IIJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partsashcontainer.1" containerData="7000">
+        <children xsi:type="basic:PartStack" xmi:id="_-2vxAJWzEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.0" containerData="3000">
+          <children xsi:type="basic:Part" xmi:id="_TNergJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.userinfo" containerData="5000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.UserInformationPart" label="User information"/>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_QM4BQJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.partstack.recorddetails" containerData="6000">
+          <children xsi:type="basic:Part" xmi:id="_UOtfAJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.recorddata" containerData="4000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.RecordInformationPart" label="Record Information">
+            <toolbar xmi:id="_1EBecJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.0">
+              <children xsi:type="menu:HandledToolItem" xmi:id="_1dLlUJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.addrecord" label="Add record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/iu_add.png" command="_q4NWQJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:HandledToolItem" xmi:id="_2xhIUJZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.showgraph" label="Show Graph" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/graph.png" command="_wZGzAJXEEeipSKs-bvEWkA"/>
+            </toolbar>
+          </children>
+          <children xsi:type="basic:Part" xmi:id="_Tw_BMJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.graph" containerData="2000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.GraphPart" label="Graph"/>
         </children>
       </children>
     </children>
-    <mainMenu xmi:id="_sOCVMJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.menu.0"/>
+    <mainMenu xmi:id="_sOCVMJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_EI48oJZPEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.menu.menu" label="Menu">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_8IglsJZOEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledmenuitem.newuser" label="New User" command="_aR5rUJXEEeipSKs-bvEWkA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_IJbZ4JZPEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledmenuitem.openuser" label="Open User Data" command="_a5t5QJXEEeipSKs-bvEWkA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_IYa4IJZPEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledmenuitem.exit" label="Quit" command="_g3yaMJXEEeipSKs-bvEWkA"/>
+      </children>
+    </mainMenu>
     <trimBars xmi:id="_8tHiUJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_9STTAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.1">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_9xbfAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.0" command="_jJcTwJXEEeipSKs-bvEWkA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_9xbfAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.newuser" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/table_add.png" tooltip="New User" command="_aR5rUJXEEeipSKs-bvEWkA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_08ZkUJZOEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.openuser" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/open-commit@2x.png" tooltip="Open User Data" command="_a5t5QJXEEeipSKs-bvEWkA"/>
       </children>
     </trimBars>
   </children>
@@ -38,6 +50,7 @@
   <handlers xmi:id="_mtcUEJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.editrecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.EditRecordHandler" command="_sZI9gJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_pMtL0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.deleterecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.DeleteRecordHandler" command="_ujCpQJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_rzfA0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.showgraphhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.ShowGraphHandler" command="_wZGzAJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_YoZGsJZPEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handler.quithandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.QuitHandler" command="_g3yaMJXEEeipSKs-bvEWkA"/>
   <rootContext xmi:id="_c3AF2cjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_c3AF2sjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_c3AF28jYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
