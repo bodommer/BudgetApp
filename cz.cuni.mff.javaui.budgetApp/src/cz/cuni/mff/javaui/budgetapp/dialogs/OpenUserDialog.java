@@ -18,9 +18,12 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
 import cz.cuni.mff.javaui.budgetapp.database.DBData;
@@ -31,6 +34,7 @@ public class OpenUserDialog extends Dialog {
 	private Map<Integer, String> names;
 	private int choice;
 	private Button okButton;
+	private Map<Integer, Integer> listMapper;
 	
 	public OpenUserDialog(Shell parentShell) {
         super(parentShell);
@@ -39,18 +43,31 @@ public class OpenUserDialog extends Dialog {
     @Override
     protected Control createDialogArea(Composite parent) {
         Composite container = (Composite) super.createDialogArea(parent);
-        FillLayout fl = new FillLayout();
-        container.setLayout(fl);
+        container.setLayout(new GridLayout(1, false));
         
+        Label label = new Label(container, SWT.NONE);
+        label.setText("Choose the user you want to load:");
+        GridData labelGD = new GridData(SWT.LEFT, SWT.NONE, true, false);
+        labelGD.heightHint = 20;
+        label.setLayoutData(labelGD);
         
-        
-        list = new org.eclipse.swt.widgets.List(container, SWT.SINGLE | SWT.BORDER);
+        list = new org.eclipse.swt.widgets.List(container, SWT.SINGLE);
+		GridData listGD = new GridData(SWT.FILL, SWT.FILL, true, true);
+		listGD.widthHint = 205;
+		list.setLayoutData(listGD);
         list.setEnabled(true);      
         
         names = getUsers();
+        
+        listMapper = new HashMap<Integer, Integer>();
+        
+        int counter = 0;
+        
         list.removeAll();
         for (int i : names.keySet()) {
         	list.add(names.get(i));
+        	listMapper.put(counter, i);
+        	counter++;
         }
         list.select(0);
         
@@ -86,7 +103,7 @@ public class OpenUserDialog extends Dialog {
  	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
  	        		   DBData.host, DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
 	        
-	        PreparedStatement ps = conn.prepareStatement("SELECT name FROM budget_db.user");
+	        PreparedStatement ps = conn.prepareStatement("SELECT iduser, name FROM budget_db.user");
 	        ResultSet rs = ps.executeQuery();
         	Map<Integer, String> ret = new HashMap<Integer, String>();
         	while (rs.next()) {
@@ -116,18 +133,18 @@ public class OpenUserDialog extends Dialog {
     
     @Override
     protected void okPressed() {
-    	this.choice = list.getItem(list.getSelectionIndex());
+    	this.choice = listMapper.get(list.getSelectionIndex());
     	super.okPressed();
     }
     
     @Override
     protected void configureShell(Shell shell) {
         super.configureShell(shell);
-        shell.setText("Choose the user you want to load");
+        shell.setText(" Load User Data");
         shell.setSize(225, 300);
      }
     
-    public String getChoice() {
+    public int getChoice() {
     	return this.choice;
     }
 }
