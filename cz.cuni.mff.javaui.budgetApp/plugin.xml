@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-
    <extension
          id="product"
          point="org.eclipse.core.runtime.products">
@@ -9,11 +8,11 @@
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
             name="cz.cuni.mff.javaui.budgetApp">
          <property
-               name="applicationCSS"
-               value="platform:/plugin/cz.cuni.mff.javaui.budgetApp/css/default.css">
-         </property>
-         <property
                name="appName"
+               value="cz.cuni.mff.javaui.budgetApp">
+         </property>
+          <property
+               name="mysql-connector"
                value="cz.cuni.mff.javaui.budgetApp">
          </property>
       </product>

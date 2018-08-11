@@ -7,6 +7,8 @@
           <children xsi:type="basic:Part" xmi:id="_Z3zOcJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.periods" containerData="5000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.PeriodsPart" label="Periods">
             <toolbar xmi:id="_Uy7i8JZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.2">
               <children xsi:type="menu:HandledToolItem" xmi:id="_WEAJQJZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.addperiod" label="Add period" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/iu_add.png" command="_jJcTwJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:HandledToolItem" xmi:id="_q8aFEJZZEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.editperiod" label="Edit Period" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/editconfig.png" command="_k4U3cJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:HandledToolItem" xmi:id="_w-CQUJZZEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.deleteperiod" label="Delete Period" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/delete_config.png" command="_mI3SQJXEEeipSKs-bvEWkA"/>
             </toolbar>
           </children>
         </children>
@@ -19,6 +21,9 @@
           <children xsi:type="basic:Part" xmi:id="_UOtfAJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.recorddata" containerData="4000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.RecordInformationPart" label="Record Information">
             <toolbar xmi:id="_1EBecJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.0">
               <children xsi:type="menu:HandledToolItem" xmi:id="_1dLlUJXOEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.addrecord" label="Add record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/iu_add.png" command="_q4NWQJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:HandledToolItem" xmi:id="_57t9AJZZEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.editrecord" label="Edit Record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/editconfig.png" tooltip="Edit Record" command="_sZI9gJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:HandledToolItem" xmi:id="_5IFgoJZZEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.deleterecord" label="Delete Record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/delete_config.png" tooltip="Delete Record" command="_ujCpQJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:ToolBarSeparator" xmi:id="_FYiloJZaEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.toolbarseparator.0"/>
               <children xsi:type="menu:HandledToolItem" xmi:id="_2xhIUJZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.showgraph" label="Show Graph" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/graph.png" command="_wZGzAJXEEeipSKs-bvEWkA"/>
             </toolbar>
           </children>
@@ -37,6 +42,7 @@
       <children xsi:type="menu:ToolBar" xmi:id="_9STTAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.toolbar.1">
         <children xsi:type="menu:HandledToolItem" xmi:id="_9xbfAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.newuser" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/table_add.png" tooltip="New User" command="_aR5rUJXEEeipSKs-bvEWkA"/>
         <children xsi:type="menu:HandledToolItem" xmi:id="_08ZkUJZOEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.openuser" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/open-commit@2x.png" tooltip="Open User Data" command="_a5t5QJXEEeipSKs-bvEWkA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gJ2rwJlqEeiYkJHqH23dFQ" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.savechanges" accessibilityPhrase="" label="Save Changes" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/save.gif" tooltip="Save Changes"/>
       </children>
     </trimBars>
   </children>
@@ -51,6 +57,7 @@
   <handlers xmi:id="_pMtL0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.deleterecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.DeleteRecordHandler" command="_ujCpQJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_rzfA0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.showgraphhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.ShowGraphHandler" command="_wZGzAJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_YoZGsJZPEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handler.quithandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.QuitHandler" command="_g3yaMJXEEeipSKs-bvEWkA"/>
+  <handlers xmi:id="_rc9-wJlqEeiYkJHqH23dFQ" elementId="cz.cuni.mff.javaui.budgetapp.handler.savechanges" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.SaveChangesHandler" command="_py_wQJlqEeiYkJHqH23dFQ"/>
   <rootContext xmi:id="_c3AF2cjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_c3AF2sjYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_c3AF28jYEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
@@ -66,6 +73,7 @@
   <commands xmi:id="_sZI9gJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.editrecord" commandName="Edit Record"/>
   <commands xmi:id="_ujCpQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.deleterecord" commandName="Delete Record"/>
   <commands xmi:id="_wZGzAJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.showgraph" commandName="Show Graph"/>
+  <commands xmi:id="_py_wQJlqEeiYkJHqH23dFQ" elementId="cz.cuni.mff.javaui.budgetapp.command.savechanges" commandName="Save Changes"/>
   <addons xmi:id="_c3AF0sjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_c3AF08jYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_c3AF1MjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
