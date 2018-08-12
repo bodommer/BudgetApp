@@ -10,7 +10,7 @@ public class NewPeriodDialog extends InputDialog {
 	
 	public NewPeriodDialog(Shell parentShell, String dialogTitle, String dialogMessage, String initialValue,
 			IInputValidator validator) {
-		super(parentShell, dialogTitle, dialogMessage, initialValue, validator);
+		super(parentShell, dialogTitle, dialogMessage, initialValue, validator);   
 	}
 	
 	@Override
@@ -21,5 +21,9 @@ public class NewPeriodDialog extends InputDialog {
 	
 	public String getName() {
 		return result;
+	}
+	
+	public void setString(String s) {
+		getText().setText(s);
 	}
 }

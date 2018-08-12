@@ -40,6 +40,8 @@ public class AddPeriodHandler {
 			String name = npd.getName();
 			DBManipulator.addPeriod(name, DataLoader.getUser(application), shell);
 			DataLoader.getPeriods(application).loadPeriods(application, shell);
+			DataLoader.getUserInfo(application).refresh();
+			DataLoader.getPeriods(application).refresh();
 		}
 	}
 }

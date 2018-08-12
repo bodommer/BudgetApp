@@ -38,6 +38,7 @@ public class NewUserHandler {
 		nud.create();
 		if (nud.open() == Window.OK ) {
 			CreateUser(shell, nud.getName());
+			
 	    }
 		//nud.close();
     }
@@ -63,6 +64,7 @@ public class NewUserHandler {
 	        if(ps.execute()) {
 	        	MessageDialog.openInformation(shell, "User created", "User creation done successfully");
 	        }	
+	        
 	    } catch (SQLException ex) {
 	    	MessageDialog.openError(shell, "User not created", "Database error. Check your internet connection and try again.");
 	        System.out.println("SQLException: " + ex.getMessage());

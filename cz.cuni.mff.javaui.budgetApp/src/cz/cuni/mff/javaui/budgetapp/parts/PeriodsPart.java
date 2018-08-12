@@ -112,4 +112,11 @@ public class PeriodsPart {
 		list.add(s);
 		list.select(0);
 	}	
+	
+	public String getSelectedString() {
+		if (list.getSelectionCount() == 1) {
+			return list.getSelection()[0];
+		}
+		return "";
+	}
 }

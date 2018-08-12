@@ -101,9 +101,6 @@ public class UserInformationPart {
 		created.setLayoutData(gd6);
 		lastChangeLabel.setLayoutData(gd7);
 		lastChange.setLayoutData(gd8);
-		
-		
-		
 	}
 	
 	public boolean updateUserInfo(MApplication application, Shell shell) {
@@ -142,4 +139,5 @@ public class UserInformationPart {
 	public void refresh() {
 		name.forceFocus();
 	}
+
 }
