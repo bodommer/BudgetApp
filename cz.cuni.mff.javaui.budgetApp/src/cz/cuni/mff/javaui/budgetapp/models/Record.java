@@ -1,19 +1,25 @@
 package cz.cuni.mff.javaui.budgetapp.models;
 
-import java.util.GregorianCalendar;
+import java.sql.Date;
 
 public class Record {
 
 	private int period;
 	private int amount;
-	private int balance;
-	private GregorianCalendar date;
+	private String note;
+	private Date date;
+	private int id;
 	
-	public Record (int period, int amount, int balance, GregorianCalendar date) {
+	public Record (int id, int period, int amount, String note, Date date) {
+		this.id = id;
 		this.period = period;
 		this.amount = amount;
-		this.balance = balance;
+		this.note = note;
 		this.date = date;
+	}
+	
+	public int getID() {
+		return id;
 	}
 	
 	public int getPeriod() {
@@ -28,19 +34,19 @@ public class Record {
 		this.amount = amount;
 	}
 	
-	public int getBalance( ) {
-		return balance;
+	public String getNote( ) {
+		return note;
 	}
 	
-	public void setBalance(int balance) {
-		this.balance = balance;
+	public void setNote(String note) {
+		this.note = note;
 	}
 	
-	public GregorianCalendar getDate() {
+	public Date getDate() {
 		return date;
 	}
 	
-	public void setDate(GregorianCalendar date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 	

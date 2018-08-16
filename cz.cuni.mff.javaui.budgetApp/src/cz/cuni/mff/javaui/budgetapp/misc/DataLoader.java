@@ -28,4 +28,9 @@ public class DataLoader {
 	public static UserInformationPart getUserInfo(MApplication application) {
 		return (UserInformationPart) application.getContext().get("userInformationPart");
 	}
+	
+	public static int getPeriod(MApplication application) {
+		if (application.getContext().get("period") == null) return 0;
+		return (int) application.getContext().get("period");
+	}
 }

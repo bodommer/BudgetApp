@@ -16,6 +16,7 @@ public class OpenUserHandler {
 		OpenUserDialog oud = new OpenUserDialog(shell);
 	    if (oud.open() == Window.OK) {
 	    	application.getContext().set("user", oud.getChoice());
+	    	application.getContext().remove("period");
 	    	if (!(
 	    	DataLoader.getPeriods(application).loadPeriods(application, shell) |
 	    	DataLoader.getUserInfo(application).updateUserInfo(application, shell))) {

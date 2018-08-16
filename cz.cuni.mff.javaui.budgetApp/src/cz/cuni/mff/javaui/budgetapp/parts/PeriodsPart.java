@@ -26,6 +26,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
 import cz.cuni.mff.javaui.budgetapp.database.DBData;
+import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
+import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 
 public class PeriodsPart {
 
@@ -33,7 +35,7 @@ public class PeriodsPart {
 	private Map<Integer, Integer> periodListMapper;
 	
 	@PostConstruct
-	public void createComposite(Composite parent, MApplication application, EPartService service) {
+	public void createComposite(Composite parent, MApplication application, Shell shell) {
 		parent.setLayout(new GridLayout(1, false));
 		
 		application.getContext().set("periodsPart", this);
@@ -47,9 +49,11 @@ public class PeriodsPart {
 			
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-			}
+			} 
 			@Override
-			public void widgetDefaultSelected(SelectionEvent e) {				
+			public void widgetDefaultSelected(SelectionEvent e) {	
+				application.getContext().set("period", getSelected());
+				if (getSelected() >= 0) DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application), shell);
 			}
 		});
 	}
@@ -77,6 +81,7 @@ public class PeriodsPart {
 	        	String name = rs.getString("period_name");
 	        	addItem(name);
 	        	periodListMapper.put(counter, id);
+	        	counter++;
         	}
 
 	    } catch (SQLException ex) {

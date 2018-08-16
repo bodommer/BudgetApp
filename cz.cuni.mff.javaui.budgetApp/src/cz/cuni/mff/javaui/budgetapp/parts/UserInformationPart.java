@@ -46,25 +46,21 @@ public class UserInformationPart {
 		nameLabel.setText("Name: ");
 		
 		name = new Label(parent, SWT.NONE);
-		name.setText("John Cena");
 		
 		balanceLabel = new Label(parent, SWT.VERTICAL);
 		balanceLabel.setText("Balance: ");
 		
 		balance = new Label(parent, SWT.HORIZONTAL);
-	    balance.setText("12345");
 		
 		createdLabel = new Label(parent, SWT.SHADOW_NONE);
-		createdLabel.setText("Date create: ");
+		createdLabel.setText("Date created: ");
 		
 		created = new Label(parent, SWT.CENTER);
-		created.setText("03/04/1997");
 		
 		lastChangeLabel = new Label(parent, SWT.WRAP);
 		lastChangeLabel.setText("Last change:");
 		
 		lastChange = new Label(parent, SWT.RIGHT);
-		lastChange.setText("01/08/2018");
 		
 		GridData gd1 = new GridData();
 		GridData gd2 = new GridData();
