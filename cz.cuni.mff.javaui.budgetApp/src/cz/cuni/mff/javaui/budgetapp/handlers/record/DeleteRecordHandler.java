@@ -1,4 +1,4 @@
-package cz.cuni.mff.javaui.budgetapp.handlers;
+package cz.cuni.mff.javaui.budgetapp.handlers.record;
 
 import org.eclipse.e4.core.di.annotations.CanExecute;
 import org.eclipse.e4.core.di.annotations.Execute;
@@ -26,10 +26,11 @@ public class DeleteRecordHandler {
 			TableItem ti = records.getItem(items[i]);
 			if (ti != null) {
 				DBManipulator.deleteRecord(shell, (int) ti.getData("idrecord"));
-				records.loadRecords(DataLoader.getPeriod(application), shell);
-				DataLoader.getPeriods(application).refresh();
-				records.refresh();
 			}
 		}
+		DataLoader.getUserInfo(application).updateUserInfo(application, shell);
+		records.loadRecords(DataLoader.getPeriod(application), shell);
+		DataLoader.getPeriods(application).refresh();
+		records.refresh();
 	}
 }

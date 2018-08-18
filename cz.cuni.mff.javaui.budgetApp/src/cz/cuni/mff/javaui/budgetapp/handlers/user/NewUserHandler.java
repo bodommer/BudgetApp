@@ -1,4 +1,4 @@
-package cz.cuni.mff.javaui.budgetapp.handlers;
+package cz.cuni.mff.javaui.budgetapp.handlers.user;
 
 import java.io.File;
 import java.net.MalformedURLException;

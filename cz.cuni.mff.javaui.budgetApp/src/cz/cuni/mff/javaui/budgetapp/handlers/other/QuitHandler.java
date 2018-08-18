@@ -1,4 +1,4 @@
-package cz.cuni.mff.javaui.budgetapp.handlers;
+package cz.cuni.mff.javaui.budgetapp.handlers.other;
 
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.workbench.IWorkbench;

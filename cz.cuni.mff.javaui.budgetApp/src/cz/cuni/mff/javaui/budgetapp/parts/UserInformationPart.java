@@ -103,7 +103,8 @@ public class UserInformationPart {
 	
 	public boolean updateUserInfo(MApplication application, Shell shell) {
 		int balance = DBManipulator.updateBalance(shell, DataLoader.getUser(application));
-		DBManipulator.getUser(shell, DataLoader.getUser(application));
+		this.balance.setText("" + balance); 
+		return true;
 	}
 	
 	public void refresh() {

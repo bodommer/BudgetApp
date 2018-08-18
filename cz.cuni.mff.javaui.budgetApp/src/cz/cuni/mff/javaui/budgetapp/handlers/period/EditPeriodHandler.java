@@ -1,4 +1,4 @@
-package cz.cuni.mff.javaui.budgetapp.handlers;
+package cz.cuni.mff.javaui.budgetapp.handlers.period;
 
 import org.eclipse.e4.core.di.annotations.CanExecute;
 import org.eclipse.e4.core.di.annotations.Execute;

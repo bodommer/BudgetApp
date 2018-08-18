@@ -241,7 +241,7 @@ public class DBManipulator {
 	    }
 	    return 0;
 	}
-	
+	/*
 	public User getUser(Shell shell, int userID) {
 		try {
 	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -273,5 +273,5 @@ public class DBManipulator {
 	        return false;
 	    }
 	    return true;
-	}
+	}*/
 }

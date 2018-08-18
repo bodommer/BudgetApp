@@ -47,7 +47,7 @@ public class RecordInformationPart {
 	public void createComposite(Composite parent, MApplication application) {
 		records = null;
 		periodsPart = DataLoader.getPeriods(application);
-
+		
 		parent.setLayout(new GridLayout(1, false));
 
 		application.getContext().set("recordInformationPart", this);
@@ -111,6 +111,7 @@ public class RecordInformationPart {
 				}
 				amountAsc = !(amountAsc);
 				addTableItems();
+				update();
 			}
 			
 			@Override
@@ -142,6 +143,7 @@ public class RecordInformationPart {
 				}
 				noteAsc = !(noteAsc);
 				addTableItems();
+				update();
 			}
 			
 			@Override
@@ -155,7 +157,6 @@ public class RecordInformationPart {
 			
 	        public void handleEvent(Event e) {
 	    	    update();
-	    	    System.out.println("selection");
 	        }
 	    });
 		table.addListener(SWT.MouseDoubleClick, new Listener() {
@@ -168,6 +169,7 @@ public class RecordInformationPart {
 					DBManipulator.editRecord(Display.getDefault().getActiveShell(), rd.getAmount(), rd.getDate(), rd.getNote(), (int) ti.getData("idrecord"));
 					DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application), Display.getDefault().getActiveShell());
 				}
+				update();
 			}
 		});
 		
@@ -205,7 +207,7 @@ public class RecordInformationPart {
 		table.forceFocus();
 	}
 	
-	private void update() { 
+	public void update() { 
 		periodsPart.refresh();
 		refresh();
 	}
