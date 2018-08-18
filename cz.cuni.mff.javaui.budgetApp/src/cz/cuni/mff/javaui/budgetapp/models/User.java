@@ -1,21 +1,20 @@
 package cz.cuni.mff.javaui.budgetapp.models;
 
 import java.util.Calendar;
-import java.util.Date;
+import java.sql.Date;
 import java.util.GregorianCalendar;
 
 public class User {
 
 	private String name;
 	private int balance;
-	private GregorianCalendar lastEdit;
-	private GregorianCalendar created;
+	private Date lastEdit;
+	private Date created;
 	
-	public User(String name, GregorianCalendar created) {
+	public User(String name, Date created) {
 		this.name = name;
 		this.created = created;
 		balance = 0;
-		lastEdit = new GregorianCalendar(1980, 0, 1);
 	}
 	
 	public String getName() {
@@ -30,15 +29,15 @@ public class User {
 		this.balance = balance;
 	}
 	
-	public GregorianCalendar getLastEdit() {
+	public Date getLastEdit() {
 		return lastEdit;
 	}
 	
-	public void setLastedit(GregorianCalendar date) {
+	public void setLastedit(Date date) {
 		lastEdit = date;
 	}
 	
-	public GregorianCalendar getCreated() {
+	public Date getCreated() {
 		return created;
 	}
 }

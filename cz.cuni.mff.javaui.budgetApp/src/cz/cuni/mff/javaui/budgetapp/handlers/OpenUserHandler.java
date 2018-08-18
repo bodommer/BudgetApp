@@ -21,7 +21,6 @@ public class OpenUserHandler {
 	    	DataLoader.getPeriods(application).loadPeriods(application, shell) |
 	    	DataLoader.getUserInfo(application).updateUserInfo(application, shell))) {
 		    	application.getContext().remove("user");
-		    	System.out.println("Deleting user");
 	    	}
 	    }
 		oud = null;

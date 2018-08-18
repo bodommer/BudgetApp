@@ -23,6 +23,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
 import cz.cuni.mff.javaui.budgetapp.database.DBData;
+import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
+import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 
 public class UserInformationPart {
 
@@ -100,36 +102,8 @@ public class UserInformationPart {
 	}
 	
 	public boolean updateUserInfo(MApplication application, Shell shell) {
-		try {
-	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-	    } catch (Exception ex) {
-	        MessageDialog.openError(shell, "Unable to connect", "The application was unable to connect to the database. Please try again later.");
-	        return false;
-	    }
-    	System.out.println(((Integer) application.getContext().get("user")).toString());
-	    try (Connection conn =
- 	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
- 	        		   DBData.host, DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
-	        PreparedStatement ps = conn.prepareStatement("SELECT * FROM budget_db.user WHERE iduser=? LIMIT 1");
-	        ps.setInt(1, (int) application.getContext().get("user"));
-	        ResultSet rs = ps.executeQuery();
-
-	        while (rs.next()) {
-	        	name.setText(rs.getString("name"));
-	        	balance.setText(((Integer)rs.getInt("balance")).toString());
-	        	lastChange.setText(rs.getDate("last_edit").toString());
-	        	created.setText(rs.getDate("created").toString());
-        	}
-
-	    } catch (SQLException ex) {
-	    	application.getContext().remove("user");
-	    	MessageDialog.openError(shell, "DB Connection Error", "Database error. Check your internet connection and try again.");
-	        System.out.println("SQLException: " + ex.getMessage());
-	        System.out.println("SQLState: " + ex.getSQLState());
-	        System.out.println("VendorError: " + ex.getErrorCode());
-	        return false;
-	    }
-	    return true;
+		int balance = DBManipulator.updateBalance(shell, DataLoader.getUser(application));
+		DBManipulator.getUser(shell, DataLoader.getUser(application));
 	}
 	
 	public void refresh() {

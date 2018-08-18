@@ -3,6 +3,8 @@ package cz.cuni.mff.javaui.budgetapp.dialogs;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
 
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -61,7 +63,8 @@ public class RecordDialog extends Dialog {
 		amount.setIncrement(10);
 		amount.setPageIncrement(1000);
 		amount.setSelection(oldAmount);
-		date.setDate(oldDate.getYear(), oldDate.getMonth(), oldDate.getDay());
+		LocalDate loc = oldDate.toLocalDate();
+		date.setDate(loc.getYear(), loc.getMonthValue() - 1, loc.getDayOfMonth());
 		note.setText(oldText);
 
 		GridData amountLabel_gd = new GridData();
@@ -106,16 +109,15 @@ public class RecordDialog extends Dialog {
 		} catch (ParseException pe) {
 		}
 		super.okPressed();
-
 	}
-	
+
 	private String getStringDate() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(date.getYear());
 		sb.append("/");
-		sb.append(date.getMonth());
+		sb.append(date.getMonth() + 1);
 		sb.append("/");
-		sb.append(date.getDay());
+		sb.append(date.getDay() + 1);
 		sb.append(" 00:00:00");
 		return sb.toString();
 	}
@@ -125,15 +127,15 @@ public class RecordDialog extends Dialog {
 		super.configureShell(shell);
 		shell.setText("Record configuration");
 	}
-	
+
 	public String getNote() {
 		return this.oldText;
 	}
-	
+
 	public int getAmount() {
 		return this.oldAmount;
 	}
-	
+
 	public Date getDate() {
 		return this.oldDate;
 	}

@@ -22,9 +22,8 @@ public class DeletePeriodHandler {
 	@Execute
 	public void execute(MApplication application, Shell shell) {
 		if (MessageDialog.openQuestion(shell, "Delete Period", "Deleting this period will delete all records belonging to it. Are you sure you want to delete it?")) {
-			if (DBManipulator.deletePeriod(DataLoader.getPeriods(application).getSelected(), shell)) {
-				DataLoader.getPeriods(application).loadPeriods(application, shell);
-			}
+			DBManipulator.deletePeriod(DataLoader.getPeriods(application).getSelected(), shell);
+			DataLoader.getPeriods(application).loadPeriods(application, shell);
 		}
 	}
 }

@@ -54,6 +54,8 @@ public class PeriodsPart {
 			public void widgetDefaultSelected(SelectionEvent e) {	
 				application.getContext().set("period", getSelected());
 				if (getSelected() >= 0) DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application), shell);
+				DataLoader.getUserInfo(application).refresh();
+				DataLoader.getPeriods(application).refresh();
 			}
 		});
 	}

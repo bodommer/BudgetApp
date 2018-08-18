@@ -17,7 +17,6 @@ import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 public class AddPeriodHandler {
 	@CanExecute
 	public boolean canExecute(MApplication application) {
-		System.out.println("Delete period check, current user: " + DataLoader.getUser(application));
 		if (DataLoader.getUser(application) > 0) {
 			return true;
 		}
