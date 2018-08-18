@@ -15,11 +15,12 @@ public class OpenUserHandler {
 	public void execute(Shell shell, MApplication application, EPartService service){
 		OpenUserDialog oud = new OpenUserDialog(shell);
 	    if (oud.open() == Window.OK) {
-	    	application.getContext().set("user", oud.getChoice());
+	    	int userID = oud.getChoice();
+	    	application.getContext().set("user", userID);
 	    	application.getContext().remove("period");
 	    	if (!(
 	    	DataLoader.getPeriods(application).loadPeriods(application, shell) |
-	    	DataLoader.getUserInfo(application).updateUserInfo(application, shell))) {
+	    	DataLoader.getUserInfo(application).loadUser(userID, shell, application))) {
 		    	application.getContext().remove("user");
 	    	}
 	    }

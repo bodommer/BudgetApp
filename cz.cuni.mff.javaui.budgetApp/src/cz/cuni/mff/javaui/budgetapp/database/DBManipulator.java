@@ -241,13 +241,39 @@ public class DBManipulator {
 	    }
 	    return 0;
 	}
-	/*
-	public User getUser(Shell shell, int userID) {
+	
+	public static boolean setBalance(Shell shell, int userID, int value) { 
 		try {
 	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 	    } catch (Exception ex) {
 	        MessageDialog.openError(shell, "Unable to connect", "The application was unable to connect to the database. Please try again later.");
 	        return false;
+	    }
+    	
+	    try (Connection conn =
+ 	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
+ 	        		   DBData.host, DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
+	        PreparedStatement ps = conn.prepareStatement("UPDATE budget_db.user SET balance=? WHERE iduser=?");
+	        ps.setInt(1, value);
+	        ps.setInt(2, userID);
+	        if (ps.execute()) {
+	        	return true;
+	        }
+	    } catch (SQLException ex) {
+	    	MessageDialog.openError(shell, "DB Connection Error", "Database error. Check your internet connection and try again.");
+	        System.out.println("SQLException: " + ex.getMessage());
+	        System.out.println("SQLState: " + ex.getSQLState());
+	        System.out.println("VendorError: " + ex.getErrorCode());
+	    }
+	    return false;
+	}
+	
+	public static User getUser(Shell shell, int userID) {
+		try {
+	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+	    } catch (Exception ex) {
+	        MessageDialog.openError(shell, "Unable to connect", "The application was unable to connect to the database. Please try again later.");
+	        return null;
 	    }
 	    try (Connection conn =
  	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
@@ -257,21 +283,19 @@ public class DBManipulator {
 	        ResultSet rs = ps.executeQuery();
 
 	        while (rs.next()) {
-	        	return new User();
-	        	name.setText(rs.getString("name"));
-	        	balance.setText(((Integer)rs.getInt("balance")).toString());
-	        	lastChange.setText(rs.getDate("last_edit").toString());
-	        	created.setText(rs.getDate("created").toString());
+	        	User u = new User(rs.getString("name"), (Date) rs.getDate("created"));
+	        	u.setBalance(((Integer)rs.getInt("balance")));
+	        	return u;
         	}
 
 	    } catch (SQLException ex) {
-	    	application.getContext().remove("user");
+	    	
 	    	MessageDialog.openError(shell, "DB Connection Error", "Database error. Check your internet connection and try again.");
 	        System.out.println("SQLException: " + ex.getMessage());
 	        System.out.println("SQLState: " + ex.getSQLState());
 	        System.out.println("VendorError: " + ex.getErrorCode());
-	        return false;
+	        return null;
 	    }
-	    return true;
-	}*/
+	    return null;
+	}
 }

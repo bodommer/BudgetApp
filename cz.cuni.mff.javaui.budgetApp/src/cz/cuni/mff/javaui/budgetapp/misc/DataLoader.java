@@ -26,7 +26,8 @@ public class DataLoader {
 	}
 	
 	public static UserInformationPart getUserInfo(MApplication application) {
-		return (UserInformationPart) application.getContext().get("userInformationPart");
+		UserInformationPart uip = (UserInformationPart) application.getContext().get("userInformationPart");
+		return uip;
 	}
 	
 	public static int getPeriod(MApplication application) {
