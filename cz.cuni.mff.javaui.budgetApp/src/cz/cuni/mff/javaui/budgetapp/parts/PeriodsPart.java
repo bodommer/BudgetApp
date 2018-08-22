@@ -39,7 +39,7 @@ public class PeriodsPart {
 		parent.setLayout(new GridLayout(1, false));
 		
 		application.getContext().set("periodsPart", this);
-				
+		
 		list = new List(parent, SWT.SINGLE);
 		GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
 		data.widthHint = 350;

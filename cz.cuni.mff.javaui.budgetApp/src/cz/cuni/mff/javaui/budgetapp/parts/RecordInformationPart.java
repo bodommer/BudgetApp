@@ -9,6 +9,8 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.eclipse.e4.ui.model.application.MApplication;
+import org.eclipse.e4.ui.workbench.modeling.EPartService;
+import org.eclipse.e4.ui.workbench.modeling.EPartService.PartState;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
@@ -44,7 +46,7 @@ public class RecordInformationPart {
 	private PeriodsPart periodsPart;
 
 	@PostConstruct
-	public void createComposite(Composite parent, MApplication application) {
+	public void createComposite(Composite parent, MApplication application, EPartService service) {
 		records = null;
 		periodsPart = DataLoader.getPeriods(application);
 		
@@ -52,6 +54,8 @@ public class RecordInformationPart {
 
 		application.getContext().set("recordInformationPart", this);
 
+		service.showPart("cz.cuni.mff.javaui.budgetapp.part.graph", PartState.CREATE);
+		
 		table = new Table(parent, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
 		GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
 		table.setLayoutData(data);

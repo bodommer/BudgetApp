@@ -15,7 +15,10 @@ import cz.cuni.mff.javaui.budgetapp.parts.GraphPart;
 public class ShowGraphHandler {
 	@CanExecute
 	public boolean canExecute(MApplication application) {
-		return true;
+		if (DataLoader.getPeriod(application) > 0) {
+			return true;
+		}
+		return false;
 	}	
 	
 	@Execute
