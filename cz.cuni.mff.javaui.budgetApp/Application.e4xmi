@@ -26,7 +26,7 @@
               <children xsi:type="menu:HandledToolItem" xmi:id="_57t9AJZZEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.editrecord" label="Edit Record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/editconfig.png" tooltip="Edit Record" command="_sZI9gJXEEeipSKs-bvEWkA"/>
               <children xsi:type="menu:HandledToolItem" xmi:id="_5IFgoJZZEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.deleterecord" label="Delete Record" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/delete_config.png" tooltip="Delete Record" command="_ujCpQJXEEeipSKs-bvEWkA"/>
               <children xsi:type="menu:ToolBarSeparator" xmi:id="_FYiloJZaEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.toolbarseparator.0"/>
-              <children xsi:type="menu:HandledToolItem" xmi:id="_2xhIUJZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.showgraph" label="Show Graph" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/graph.png" command="_wZGzAJXEEeipSKs-bvEWkA"/>
+              <children xsi:type="menu:HandledToolItem" xmi:id="_2xhIUJZNEeiqU4C4DunVTw" elementId="cz.cuni.mff.javaui.budgetapp.handledtoolitem.showgraph" label="Draw/Update graph" iconURI="platform:/plugin/cz.cuni.mff.javaui.budgetApp/icons/graph.png" command="_wZGzAJXEEeipSKs-bvEWkA"/>
             </toolbar>
           </children>
           <children xsi:type="basic:Part" xmi:id="_Tw_BMJWyEeii8f-uhi5uog" elementId="cz.cuni.mff.javaui.budgetapp.part.graph" containerData="2000" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.parts.GraphPart" label="Graph"/>

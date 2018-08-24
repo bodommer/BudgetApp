@@ -168,6 +168,7 @@ public class RecordInformationPart {
 			@Override
 			public void handleEvent(Event event) {
 				TableItem ti = getSelectedItem();
+				if (ti  == null) return;
 				RecordDialog rd = new RecordDialog(Display.getDefault().getActiveShell(), (int) ti.getData("amount"), (Date) ti.getData("date"), (String) ti.getData("note"));
 				if (rd.open() == Window.OK) {
 					DBManipulator.editRecord(Display.getDefault().getActiveShell(), rd.getAmount(), rd.getDate(), rd.getNote(), (int) ti.getData("idrecord"));
@@ -217,11 +218,14 @@ public class RecordInformationPart {
 	}
 
 	public void loadRecords(int periodID, Shell shell) {
+		System.out.println("records loaded " + periodID);
 		this.records = DBManipulator.getRecords(shell, periodID);
 		addTableItems();
+		table.update();
 	}
 	
 	public TableItem getSelectedItem() {
+		if(table.getSelectionCount() == 0) return null;
 		return table.getItem(table.getSelectionIndex());
 	}
 
@@ -239,5 +243,9 @@ public class RecordInformationPart {
 			ti.setData("date", r.getDate());
 
 		}
+	}
+	
+	public void clearTable() {
+		table.removeAll();
 	}
 }

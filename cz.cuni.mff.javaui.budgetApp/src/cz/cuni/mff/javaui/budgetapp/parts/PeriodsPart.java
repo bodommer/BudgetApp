@@ -49,13 +49,13 @@ public class PeriodsPart {
 			
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-			} 
-			@Override
-			public void widgetDefaultSelected(SelectionEvent e) {	
 				application.getContext().set("period", getSelected());
 				if (getSelected() >= 0) DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application), shell);
 				DataLoader.getUserInfo(application).refresh();
 				DataLoader.getPeriods(application).refresh();
+			} 
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {	
 			}
 		});
 	}
@@ -94,6 +94,12 @@ public class PeriodsPart {
 	        System.out.println("VendorError: " + ex.getErrorCode());
 	        return false;
 	    }
+        if (getSelected() > 0) {
+			application.getContext().set("period", getSelected());
+			DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application), shell);
+        }
+		DataLoader.getUserInfo(application).refresh();
+		DataLoader.getPeriods(application).refresh();
 	    return true;
 	}
 	

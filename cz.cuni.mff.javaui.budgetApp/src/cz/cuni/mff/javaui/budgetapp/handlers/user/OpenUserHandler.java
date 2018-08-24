@@ -18,6 +18,7 @@ public class OpenUserHandler {
 	    	int userID = oud.getChoice();
 	    	application.getContext().set("user", userID);
 	    	application.getContext().remove("period");
+	    	DataLoader.getRecords(application).clearTable();
 	    	if (!(
 	    	DataLoader.getPeriods(application).loadPeriods(application, shell) |
 	    	DataLoader.getUserInfo(application).loadUser(userID, shell, application))) {
