@@ -12,6 +12,12 @@ import cz.cuni.mff.javaui.budgetapp.dialogs.NewPeriodDialog;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 import cz.cuni.mff.javaui.budgetapp.parts.GraphPart;
 
+/**
+ * Responsible for displaying graph.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class ShowGraphHandler {
 	@CanExecute
 	public boolean canExecute(MApplication application) {
@@ -19,16 +25,14 @@ public class ShowGraphHandler {
 			return true;
 		}
 		return false;
-	}	
-	
+	}
+
 	@Execute
 	public void execute(Shell shell, MApplication application) {
 		GraphPart part = DataLoader.getGraph(application);
 		if (part == null) {
-			System.out.println("null part");
 			return;
 		}
 		part.loadData(application, shell);
-		System.out.println("drawn");
 	}
 }

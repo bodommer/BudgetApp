@@ -10,6 +10,12 @@ import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 import cz.cuni.mff.javaui.budgetapp.parts.RecordInformationPart;
 
+/**
+ * Handler for the event of deleting a record.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class DeleteRecordHandler {
 	@CanExecute
 	public boolean canExecute(MApplication application) {

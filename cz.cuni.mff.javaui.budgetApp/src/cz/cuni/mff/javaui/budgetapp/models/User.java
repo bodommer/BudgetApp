@@ -4,6 +4,12 @@ import java.util.Calendar;
 import java.sql.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * Contains all the data relevant to the user.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class User {
 
 	private String name;

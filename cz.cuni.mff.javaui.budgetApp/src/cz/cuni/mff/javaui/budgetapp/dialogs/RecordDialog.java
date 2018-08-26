@@ -20,6 +20,12 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * A custom-made dialog that retrieves data from user about a new/edited record.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class RecordDialog extends Dialog {
 
 	private Label amountLabel;
@@ -33,6 +39,14 @@ public class RecordDialog extends Dialog {
 	private Date oldDate;
 	private String oldText;
 
+	/**
+	 * The constructor. The attributes can be added to have pre-filled values (when editing).
+	 *  
+	 * @param shell
+	 * @param amount
+	 * @param date
+	 * @param text
+	 */
 	public RecordDialog(Shell shell, int amount, Date date, String text) {
 		super(shell);
 		this.oldAmount = amount;

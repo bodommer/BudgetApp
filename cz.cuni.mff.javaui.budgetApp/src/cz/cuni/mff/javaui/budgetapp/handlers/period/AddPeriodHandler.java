@@ -14,6 +14,12 @@ import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
 import cz.cuni.mff.javaui.budgetapp.dialogs.NewPeriodDialog;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 
+/**
+ * Handles the event of adding a period.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class AddPeriodHandler {
 	@CanExecute
 	public boolean canExecute(MApplication application) {
@@ -21,20 +27,21 @@ public class AddPeriodHandler {
 			return true;
 		}
 		return false;
-	}	
-	
+	}
+
 	@Execute
 	public void execute(Shell shell, MApplication application) {
-		NewPeriodDialog npd = new NewPeriodDialog(shell, " Add Period", "Enter period name.", "", new IInputValidator() {
-			
-			@Override
-			public String isValid(String newText) {
-				if (newText.matches("\\w+") && newText.length() <= 32) {
-					return null;
-				}
-				return "Name must have 1-32 characters and the allowed symbols are letters, digits and underscore.";
-			}
-		});
+		NewPeriodDialog npd = new NewPeriodDialog(shell, " Add Period", "Enter period name.", "",
+				new IInputValidator() {
+
+					@Override
+					public String isValid(String newText) {
+						if (newText.matches("\\w+") && newText.length() <= 32) {
+							return null;
+						}
+						return "Name must have 1-32 characters and the allowed symbols are letters, digits and underscore.";
+					}
+				});
 		if (npd.open() == Window.OK) {
 			String name = npd.getName();
 			DBManipulator.addPeriod(name, DataLoader.getUser(application), shell);

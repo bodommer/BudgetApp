@@ -31,6 +31,12 @@ import cz.cuni.mff.javaui.budgetapp.dialogs.RecordDialog;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 import cz.cuni.mff.javaui.budgetapp.models.Record;
 
+/**
+ * Represents a viewpart that displays the records and relevant methods.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class RecordInformationPart {
 
 	private Table table;
@@ -38,24 +44,24 @@ public class RecordInformationPart {
 	private TableColumn commentColumn;
 	private TableColumn dateColumn;
 	private List<Record> records;
-	
+
 	private boolean noteAsc = true;
 	private boolean dateAsc = true;
 	private boolean amountAsc = true;
-	
+
 	private PeriodsPart periodsPart;
 
 	@PostConstruct
 	public void createComposite(Composite parent, MApplication application, EPartService service) {
 		records = null;
 		periodsPart = DataLoader.getPeriods(application);
-		
+
 		parent.setLayout(new GridLayout(1, false));
 
 		application.getContext().set("recordInformationPart", this);
 
 		service.showPart("cz.cuni.mff.javaui.budgetapp.part.graph", PartState.CREATE);
-		
+
 		table = new Table(parent, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
 		GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
 		table.setLayoutData(data);
@@ -64,60 +70,62 @@ public class RecordInformationPart {
 		dateColumn.setText("Date");
 		dateColumn.setWidth(100);
 		dateColumn.addSelectionListener(new SelectionListener() {
-			
+
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (records == null) return;
+				if (records == null)
+					return;
 				if (dateAsc) {
-					Collections.sort(records, new Comparator<Record>(){
-						  public int compare(Record r1, Record r2){
-						    return r1.getDate().compareTo(r2.getDate());
-						  }
-						});
+					Collections.sort(records, new Comparator<Record>() {
+						public int compare(Record r1, Record r2) {
+							return r1.getDate().compareTo(r2.getDate());
+						}
+					});
 				} else {
-					Collections.sort(records, new Comparator<Record>(){
-						  public int compare(Record r1, Record r2){
-						    return r2.getDate().compareTo(r1.getDate());
-						  }
-						});
+					Collections.sort(records, new Comparator<Record>() {
+						public int compare(Record r1, Record r2) {
+							return r2.getDate().compareTo(r1.getDate());
+						}
+					});
 				}
 				dateAsc = !(dateAsc);
 				addTableItems();
 			}
-			
+
 			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
-		
+
 		amountColumn = new TableColumn(table, SWT.CENTER);
 		amountColumn.setText("Amount");
 		amountColumn.setWidth(80);
 		amountColumn.addSelectionListener(new SelectionListener() {
-			
+
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (records == null) return;
+				if (records == null)
+					return;
 				if (amountAsc) {
-					Collections.sort(records, new Comparator<Record>(){
-						  public int compare(Record r1, Record r2){
-						    return r1.getAmount() - r2.getAmount();
-						  }
-						});
+					Collections.sort(records, new Comparator<Record>() {
+						public int compare(Record r1, Record r2) {
+							return r1.getAmount() - r2.getAmount();
+						}
+					});
 				} else {
-					Collections.sort(records, new Comparator<Record>(){
-						  public int compare(Record r1, Record r2){
-						    return r2.getAmount() - r1.getAmount();
-						  }
-						});
+					Collections.sort(records, new Comparator<Record>() {
+						public int compare(Record r1, Record r2) {
+							return r2.getAmount() - r1.getAmount();
+						}
+					});
 				}
 				amountAsc = !(amountAsc);
 				addTableItems();
 				update();
 			}
-			
+
 			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 				// TODO Auto-generated method stub
@@ -128,78 +136,104 @@ public class RecordInformationPart {
 		commentColumn.setText("Comment");
 		commentColumn.setWidth(320);
 		commentColumn.addSelectionListener(new SelectionListener() {
-			
+
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (records == null) return;
+				if (records == null)
+					return;
 				if (noteAsc) {
-					Collections.sort(records, new Comparator<Record>(){
-						  public int compare(Record r1, Record r2){
-						    return r1.getNote().compareTo(r2.getNote());
-						  }
-						});
+					Collections.sort(records, new Comparator<Record>() {
+						public int compare(Record r1, Record r2) {
+							return r1.getNote().compareTo(r2.getNote());
+						}
+					});
 				} else {
-					Collections.sort(records, new Comparator<Record>(){
-						  public int compare(Record r1, Record r2){
-						    return r2.getNote().compareTo(r1.getNote());
-						  }
-						});
+					Collections.sort(records, new Comparator<Record>() {
+						public int compare(Record r1, Record r2) {
+							return r2.getNote().compareTo(r1.getNote());
+						}
+					});
 				}
 				noteAsc = !(noteAsc);
 				addTableItems();
 				update();
 			}
-			
+
 			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
-		
+
 		table.addListener(SWT.MouseDown, new Listener() {
-			
-	        public void handleEvent(Event e) {
-	    	    update();
-	        }
-	    });
+
+			public void handleEvent(Event e) {
+				update();
+			}
+		});
 		table.addListener(SWT.MouseDoubleClick, new Listener() {
-			
+
 			@Override
 			public void handleEvent(Event event) {
 				TableItem ti = getSelectedItem();
-				if (ti  == null) return;
-				RecordDialog rd = new RecordDialog(Display.getDefault().getActiveShell(), (int) ti.getData("amount"), (Date) ti.getData("date"), (String) ti.getData("note"));
+				if (ti == null)
+					return;
+				RecordDialog rd = new RecordDialog(Display.getDefault().getActiveShell(), (int) ti.getData("amount"),
+						(Date) ti.getData("date"), (String) ti.getData("note"));
 				if (rd.open() == Window.OK) {
-					DBManipulator.editRecord(Display.getDefault().getActiveShell(), rd.getAmount(), rd.getDate(), rd.getNote(), (int) ti.getData("idrecord"));
-					DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application), Display.getDefault().getActiveShell());
+					DBManipulator.editRecord(Display.getDefault().getActiveShell(), rd.getAmount(), rd.getDate(),
+							rd.getNote(), (int) ti.getData("idrecord"));
+					DataLoader.getRecords(application).loadRecords(DataLoader.getPeriod(application),
+							Display.getDefault().getActiveShell());
 				}
 				update();
 			}
 		});
-		
+
 		table.setLinesVisible(true);
 		table.setHeaderVisible(true);
 	}
-	
+
+	/**
+	 * Returns the answer to question 'Is exactly one table item selected?'
+	 * 
+	 * @return
+	 */
 	public boolean isSelectedOne() {
 		if (table.getSelectionCount() == 1) {
 			return true;
 		}
 		return false;
 	}
-	
+
+	/**
+	 * Returns the answer to question 'Is at least one table item selected?'
+	 * 
+	 * @return
+	 */
 	public boolean isSelected() {
 		if (table.getSelectionCount() > 0) {
 			return true;
 		}
 		return false;
 	}
-	
+
+	/**
+	 * Returns the table indexes of selected items.
+	 * 
+	 * @return
+	 */
 	public int[] getSelectedItems() {
 		return table.getSelectionIndices();
 	}
-	
+
+	/**
+	 * Returns the item at the provided index.
+	 * 
+	 * @param index
+	 * @return
+	 */
 	public TableItem getItem(int index) {
 		try {
 			return table.getItem(index);
@@ -207,28 +241,43 @@ public class RecordInformationPart {
 			return null;
 		}
 	}
-	
+
 	public void refresh() {
 		table.forceFocus();
 	}
-	
-	public void update() { 
+
+	public void update() {
 		periodsPart.refresh();
 		refresh();
 	}
 
+	/**
+	 * Used for loading and populating table with relevant table items.
+	 * 
+	 * @param periodID
+	 * @param shell
+	 */
 	public void loadRecords(int periodID, Shell shell) {
 		System.out.println("records loaded " + periodID);
 		this.records = DBManipulator.getRecords(shell, periodID);
 		addTableItems();
 		table.update();
 	}
-	
+
+	/**
+	 * Returns the first table item from the selection.
+	 * 
+	 * @return
+	 */
 	public TableItem getSelectedItem() {
-		if(table.getSelectionCount() == 0) return null;
+		if (table.getSelectionCount() == 0)
+			return null;
 		return table.getItem(table.getSelectionIndex());
 	}
 
+	/**
+	 * Adds the table items to the table from the records attribute.
+	 */
 	private void addTableItems() {
 		table.removeAll();
 		for (Record r : this.records) {
@@ -244,7 +293,7 @@ public class RecordInformationPart {
 
 		}
 	}
-	
+
 	public void clearTable() {
 		table.removeAll();
 	}

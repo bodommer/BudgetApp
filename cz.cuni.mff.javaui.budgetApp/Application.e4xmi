@@ -52,7 +52,6 @@
   <handlers xmi:id="_X1VQUJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.addperiodhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.period.AddPeriodHandler" command="_jJcTwJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_auCi0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.editperiodhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.period.EditPeriodHandler" command="_k4U3cJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_dykq0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.deleteperiodhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.period.DeletePeriodHandler" command="_mI3SQJXEEeipSKs-bvEWkA"/>
-  <handlers xmi:id="_gYUlEJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.edituserhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.user.EditUserHandler" command="_ocQ4QJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_jlXv4JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.addrecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.record.AddRecordHandler" command="_q4NWQJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_mtcUEJXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.editrecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.record.EditRecordHandler" command="_sZI9gJXEEeipSKs-bvEWkA"/>
   <handlers xmi:id="_pMtL0JXGEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.handler.deleterecordhandler" contributionURI="bundleclass://cz.cuni.mff.javaui.budgetApp/cz.cuni.mff.javaui.budgetapp.handlers.record.DeleteRecordHandler" command="_ujCpQJXEEeipSKs-bvEWkA"/>
@@ -68,7 +67,6 @@
   <commands xmi:id="_jJcTwJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.addperiod" commandName="Add Period"/>
   <commands xmi:id="_k4U3cJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.editperiod" commandName="Edit Period"/>
   <commands xmi:id="_mI3SQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.deleteperiod" commandName="Delete Period"/>
-  <commands xmi:id="_ocQ4QJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.edituser" commandName="Edit User"/>
   <commands xmi:id="_q4NWQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.addrecord" commandName="Add Record"/>
   <commands xmi:id="_sZI9gJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.editrecord" commandName="Edit Record"/>
   <commands xmi:id="_ujCpQJXEEeipSKs-bvEWkA" elementId="cz.cuni.mff.javaui.budgetapp.command.deleterecord" commandName="Delete Record"/>

@@ -29,6 +29,12 @@ import cz.cuni.mff.javaui.budgetapp.database.DBData;
 import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 
+/**
+ * Represents a viewpart that displays a list of periods and relevant methods.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class PeriodsPart {
 
 	private List list;
@@ -60,6 +66,13 @@ public class PeriodsPart {
 		});
 	}
 	
+	/**
+	 * Retrieves and populates the list widget with items.
+	 * 
+	 * @param application
+	 * @param shell
+	 * @return
+	 */
 	public boolean loadPeriods(MApplication application, Shell shell) {
 		list.removeAll();
     	try {
@@ -107,6 +120,11 @@ public class PeriodsPart {
 		list.forceFocus();
 	}
 	
+	/**
+	 * Used for the Delete period CanExecute method - if there is no item selected, the delete period button is disabled.
+	 * 
+	 * @return
+	 */
 	public boolean canDelete() {
 		if (list.getSelectionCount() == 1) {
 			return true;
@@ -114,6 +132,11 @@ public class PeriodsPart {
 		return false;
 	}
 	
+	/**
+	 * Returns the periodID of the selected item.
+	 * 
+	 * @return
+	 */
 	public int getSelected() {
 		if (list.getSelectionCount() == 0) {
 			return -1;
@@ -121,11 +144,21 @@ public class PeriodsPart {
 		return periodListMapper.get(list.getSelectionIndex());
 	}
 	
+	/**
+	 * Adds item to the list.
+	 * 
+	 * @param s
+	 */
 	public void addItem(String s) {
 		list.add(s);
 		list.select(0);
 	}	
 	
+	/**
+	 * Returns the selected string instead of periodID.
+	 * 
+	 * @return
+	 */
 	public String getSelectedString() {
 		if (list.getSelectionCount() == 1) {
 			return list.getSelection()[0];

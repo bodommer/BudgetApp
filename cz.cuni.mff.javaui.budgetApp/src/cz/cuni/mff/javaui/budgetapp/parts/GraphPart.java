@@ -22,43 +22,61 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
+/**
+ * Represents a viewpart that displays the graph and relevant methods.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class GraphPart {
-	
+
 	private Chart chart;
-	
+
+	/**
+	 * Sets layout and the widget positioning of the part.
+	 * 
+	 * @param parent
+	 * @param application
+	 * @param shell
+	 */
 	@PostConstruct
 	public void createComposite(Composite parent, MApplication application, Shell shell) {
 		FillLayout fl = new FillLayout();
 		fl.marginWidth = 20;
 		parent.setLayout(fl);
-		
+
 		application.getContext().set("graphPart", this);
-		
+
 		chart = new Chart(parent, SWT.NONE);
-		
-		IAxis xAxis = chart.getAxisSet().getXAxis(0); 
+
+		IAxis xAxis = chart.getAxisSet().getXAxis(0);
 		xAxis.enableCategory(true);
 		xAxis.getTitle().setText("Date");
 		xAxis.getTitle().setForeground(new Color(Display.getDefault(), 0, 0, 0));
 		xAxis.getTick().setForeground(new Color(Display.getDefault(), 0, 0, 0));
-		
+
 		IAxis yAxis = chart.getAxisSet().getYAxis(0);
 		yAxis.getTitle().setText("Change");
 		yAxis.getTitle().setForeground(new Color(Display.getDefault(), 0, 0, 0));
 		yAxis.getTick().setForeground(new Color(Display.getDefault(), 0, 0, 0));
-		
+
 		chart.getTitle().setText("Money change over this period");
 		chart.getTitle().setForeground(new Color(Display.getDefault(), 0, 0, 0));
 		chart.getLegend().setVisible(false);
-		
+
 		IAxisSet axisSet = chart.getAxisSet();
 		axisSet.adjustRange();
-		
-		
+
 	}
-	
+
+	/**
+	 * Loads the data to be displayed in the graph widget and displays it.
+	 * 
+	 * @param application
+	 * @param shell
+	 */
 	public void loadData(MApplication application, Shell shell) {
-		
+
 		ChartData data = DBManipulator.getChartData(application, shell);
 		if (data == null) {
 			System.out.println("null");
@@ -67,9 +85,9 @@ public class GraphPart {
 		ISeriesSet seriesSet = chart.getSeriesSet();
 		ISeries series = seriesSet.createSeries(SeriesType.LINE, "line series");
 		series.setYSeries(data.getValues());
-		
+
 		IAxisSet axisSet = chart.getAxisSet();
-		
+
 		IAxis xAxis = axisSet.getXAxis(0);
 		xAxis.setCategorySeries(data.getStrings());
 		xAxis.enableCategory(true);

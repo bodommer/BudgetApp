@@ -2,6 +2,12 @@ package cz.cuni.mff.javaui.budgetapp.models;
 
 import java.util.GregorianCalendar;
 
+/**
+ * Represents one period. Deprecated.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class Period {
 	
 	private int id;

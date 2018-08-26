@@ -28,6 +28,12 @@ import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 import cz.cuni.mff.javaui.budgetapp.models.User;
 
+/**
+ * Represents a viewpart that displays the user information.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class UserInformationPart {
 
 	private Label name;
@@ -96,6 +102,13 @@ public class UserInformationPart {
 		created.setLayoutData(gd6);
 	}
 	
+	/**
+	 * Updates the user information displayed in the part.
+	 * 
+	 * @param application
+	 * @param shell
+	 * @return
+	 */
 	public boolean updateUserInfo(MApplication application, Shell shell) {
 		int balance = DBManipulator.updateBalance(shell, DataLoader.getUser(application));
 		DBManipulator.setBalance(shell, DataLoader.getUser(application), balance);
@@ -106,6 +119,14 @@ public class UserInformationPart {
 		return true;
 	}
 	
+	/**
+	 * Loads user information and displays it.
+	 * 
+	 * @param userID
+	 * @param shell
+	 * @param application
+	 * @return
+	 */
 	public boolean loadUser(int userID, Shell shell, MApplication application) {
 		User u = DBManipulator.getUser(shell, userID);
 		if (u != null) {

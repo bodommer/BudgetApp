@@ -10,6 +10,12 @@ import org.eclipse.swt.widgets.Shell;
 import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
 import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
 
+/**
+ * Handles the event of deleting a period.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class DeletePeriodHandler {
 	@CanExecute
 	public boolean canExecute(MApplication application) {
@@ -18,10 +24,11 @@ public class DeletePeriodHandler {
 		}
 		return false;
 	}
-	
+
 	@Execute
 	public void execute(MApplication application, Shell shell) {
-		if (MessageDialog.openQuestion(shell, "Delete Period", "Deleting this period will delete all records belonging to it. Are you sure you want to delete it?")) {
+		if (MessageDialog.openQuestion(shell, "Delete Period",
+				"Deleting this period will delete all records belonging to it. Are you sure you want to delete it?")) {
 			DBManipulator.deletePeriod(DataLoader.getPeriods(application).getSelected(), shell);
 			DataLoader.getPeriods(application).loadPeriods(application, shell);
 		}

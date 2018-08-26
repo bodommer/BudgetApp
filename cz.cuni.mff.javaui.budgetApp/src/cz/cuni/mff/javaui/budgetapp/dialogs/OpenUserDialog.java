@@ -27,7 +27,14 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
 import cz.cuni.mff.javaui.budgetapp.database.DBData;
+import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
 
+/**
+ * Displays the dialog which prompts the user to choose a created user form the list of user that is to be 'opened' - loaded.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class OpenUserDialog extends Dialog {
     
 	private org.eclipse.swt.widgets.List list;
@@ -36,10 +43,18 @@ public class OpenUserDialog extends Dialog {
 	private Button okButton;
 	private Map<Integer, Integer> listMapper;
 	
+	/**
+	 * The contrusctor.
+	 * 
+	 * @param parentShell
+	 */
 	public OpenUserDialog(Shell parentShell) {
         super(parentShell);
     }
 
+	/**
+	 * Creates the dialog area and populates it with relevant widgets.
+	 */
     @Override
     protected Control createDialogArea(Composite parent) {
         Composite container = (Composite) super.createDialogArea(parent);
@@ -57,19 +72,21 @@ public class OpenUserDialog extends Dialog {
 		list.setLayoutData(listGD);
         list.setEnabled(true);      
         
-        names = getUsers();
+        names = DBManipulator.getUsers(getParentShell());
         
         listMapper = new HashMap<Integer, Integer>();
         
         int counter = 0;
         
         list.removeAll();
-        for (int i : names.keySet()) {
-        	list.add(names.get(i));
-        	listMapper.put(counter, i);
-        	counter++;
+        if (names != null) {
+	        for (int i : names.keySet()) {
+	        	list.add(names.get(i));
+	        	listMapper.put(counter, i);
+	        	counter++;
+	        }
+	        list.select(0);
         }
-        list.select(0);
         
         list.addSelectionListener( new SelectionListener() {
 			
@@ -91,35 +108,6 @@ public class OpenUserDialog extends Dialog {
         return container;
     }
     
-    private Map<Integer, String> getUsers() {
-    	try {
-	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-	    } catch (Exception ex) {
-	        MessageDialog.openError(getParentShell(), "Unable to connect", "The application was unable to connect to the database. Please try again later.");
-	        return null;
-	    }
-			
-	    try (Connection conn =
- 	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
- 	        		   DBData.host, DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
-	        
-	        PreparedStatement ps = conn.prepareStatement("SELECT iduser, name FROM budget_db.user");
-	        ResultSet rs = ps.executeQuery();
-        	Map<Integer, String> ret = new HashMap<Integer, String>();
-        	while (rs.next()) {
-        		ret.put(rs.getInt("iduser"), rs.getString("name"));
-        	}
-        	return ret;
-
-	    } catch (SQLException ex) {
-	    	MessageDialog.openError(getParentShell(), "DB Connection Error", "Database error. Check your internet connection and try again.");
-	        System.out.println("SQLException: " + ex.getMessage());
-	        System.out.println("SQLState: " + ex.getSQLState());
-	        System.out.println("VendorError: " + ex.getErrorCode());
-	        return null;
-	    }
-    }
-    
     @Override
     protected void createButtonsForButtonBar(Composite parent) {
     	
@@ -133,6 +121,7 @@ public class OpenUserDialog extends Dialog {
     
     @Override
     protected void okPressed() {
+    	// gets the selection index and maps it to the userID.
     	this.choice = listMapper.get(list.getSelectionIndex());
     	super.okPressed();
     }
@@ -143,7 +132,12 @@ public class OpenUserDialog extends Dialog {
         shell.setText(" Load User Data");
         shell.setSize(225, 300);
      }
-    
+
+    /**
+     * Returns the list selection value.
+     * 
+     * @return
+     */
     public int getChoice() {
     	return this.choice;
     }

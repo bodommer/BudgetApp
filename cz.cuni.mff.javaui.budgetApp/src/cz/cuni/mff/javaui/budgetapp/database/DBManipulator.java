@@ -27,8 +27,23 @@ import cz.cuni.mff.javaui.budgetapp.models.ChartData;
 import cz.cuni.mff.javaui.budgetapp.models.Record;
 import cz.cuni.mff.javaui.budgetapp.models.User;
 
+/**
+ * This static class executes the queries needed by the application.
+ * 
+ * @author Andrej Jurco
+ *
+ */
 public class DBManipulator {
 
+	/**
+	 * Adds a period to the database.
+	 * 
+	 * @param periodName
+	 * @param userID
+	 * @param shell
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean addPeriod(String periodName, int userID, Shell shell) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -58,6 +73,14 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Deletes a period from the database.
+	 * 
+	 * @param periodID period which has to be deleted.s
+	 * @param shell
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean deletePeriod(int periodID, Shell shell) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -85,6 +108,15 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Changes the selected period's name.
+	 * 
+	 * @param newName
+	 * @param periodID
+	 * @param shell
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean editPeriod(String newName, int periodID, Shell shell) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -113,6 +145,17 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Adds a record to the database with the input attributes.
+	 * 
+	 * @param shell
+	 * @param amount
+	 * @param date
+	 * @param text
+	 * @param periodID
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean addRecord(Shell shell, int amount, Date date, String text, int periodID) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -145,6 +188,14 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Loads records for the given period.
+	 * 
+	 * @param shell
+	 * @param periodID
+	 * @return Returns a list of Record class instances for the given period; null
+	 *         if the transactionw as unsuccesful.
+	 */
 	public static List<Record> getRecords(Shell shell, int periodID) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -176,6 +227,17 @@ public class DBManipulator {
 		return null;
 	}
 
+	/**
+	 * Updates a record's data provided as attributes of this method.
+	 * 
+	 * @param shell
+	 * @param amount
+	 * @param date
+	 * @param note
+	 * @param recordID Identifies which record to udate.
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean editRecord(Shell shell, int amount, Date date, String note, int recordID) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -207,6 +269,14 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Deletes given record.
+	 * 
+	 * @param shell
+	 * @param recordID
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean deleteRecord(Shell shell, int recordID) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -234,6 +304,13 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Updates the balance of user based on the sum of all his records.
+	 * 
+	 * @param shell
+	 * @param userID
+	 * @return Returns the newly calculated balance.
+	 */
 	public static int updateBalance(Shell shell, int userID) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -265,6 +342,15 @@ public class DBManipulator {
 		return 0;
 	}
 
+	/**
+	 * Updates user field 'balance' with the given value.
+	 * 
+	 * @param shell
+	 * @param userID
+	 * @param value
+	 * @return true is the transaction was successful, false if the transaction
+	 *         failed.
+	 */
 	public static boolean setBalance(Shell shell, int userID, int value) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -293,6 +379,14 @@ public class DBManipulator {
 		return false;
 	}
 
+	/**
+	 * Returns a User class instance of corresponding to the userID provided in the
+	 * argument.
+	 * 
+	 * @param shell
+	 * @param userID
+	 * @return Returns User instance or null if the transaction failed.
+	 */
 	public static User getUser(Shell shell, int userID) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -325,7 +419,50 @@ public class DBManipulator {
 		}
 		return null;
 	}
+	
+	/**
+	 * Creates a dictionary that maps userID to users's name.
+	 * 
+	 * @param shell
+	 * @return Created dictionary or null if the transaction failed.
+	 */
+    public static Map<Integer, String> getUsers(Shell shell) {
+    	try {
+	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+	    } catch (Exception ex) {
+	        MessageDialog.openError(shell, "Unable to connect", "The application was unable to connect to the database. Please try again later.");
+	        return null;
+	    }
+			
+	    try (Connection conn =
+ 	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
+ 	        		   DBData.host, DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
+	        
+	        PreparedStatement ps = conn.prepareStatement("SELECT iduser, name FROM budget_db.user");
+	        ResultSet rs = ps.executeQuery();
+        	Map<Integer, String> ret = new HashMap<Integer, String>();
+        	while (rs.next()) {
+        		ret.put(rs.getInt("iduser"), rs.getString("name"));
+        	}
+        	return ret;
 
+	    } catch (SQLException ex) {
+	    	MessageDialog.openError(shell, "DB Connection Error", "Database error. Check your internet connection and try again.");
+	        System.out.println("SQLException: " + ex.getMessage());
+	        System.out.println("SQLState: " + ex.getSQLState());
+	        System.out.println("VendorError: " + ex.getErrorCode());
+	        return null;
+	    }
+    }
+    
+
+	/**
+	 * Returns ChartData for the graph-drawing ready to use. 
+	 * 
+	 * @param application
+	 * @param shell
+	 * @return Returns ChartData class isntance or null if transaction failed.
+	 */
 	public static ChartData getChartData(MApplication application, Shell shell) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -357,11 +494,11 @@ public class DBManipulator {
 					"SELECT date_added, SUM(amount) AS amount FROM budget_db.record WHERE idperiod=? GROUP BY date_added ORDER BY date_added ");
 			ps.setInt(1, DataLoader.getPeriod(application));
 			rs = ps.executeQuery();
-			
-			while (rs.next()) {	
+
+			while (rs.next()) {
 				data.addData(((Date) rs.getDate("date_added")).toLocalDate(), (Integer) rs.getInt("amount"));
 			}
-			
+
 			return data;
 
 		} catch (SQLException ex) {
