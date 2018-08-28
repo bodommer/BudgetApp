@@ -1,0 +1,413 @@
+# 28/08/18 18:36:47 CEST
+# Eclipse Compiler for Java(TM) v20180528-0519, 3.14.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\database\DBManipulator.java (at line 9)
+	import java.time.LocalDate;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.time.LocalDate is never used
+----------
+2. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\database\DBManipulator.java (at line 10)
+	import java.time.format.DateTimeFormatter;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.time.format.DateTimeFormatter is never used
+----------
+3. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\database\DBManipulator.java (at line 11)
+	import java.time.format.DateTimeFormatterBuilder;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.time.format.DateTimeFormatterBuilder is never used
+----------
+4. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\database\DBManipulator.java (at line 12)
+	import java.time.temporal.ChronoUnit;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.time.temporal.ChronoUnit is never used
+----------
+5. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\database\DBManipulator.java (at line 18)
+	import javax.inject.Inject;
+	       ^^^^^^^^^^^^^^^^^^^
+The import javax.inject.Inject is never used
+----------
+6. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\database\DBManipulator.java (at line 23)
+	import org.eclipse.swt.widgets.TableItem;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.widgets.TableItem is never used
+----------
+----------
+7. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 3)
+	import java.sql.Connection;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.sql.Connection is never used
+----------
+8. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 4)
+	import java.sql.Date;
+	       ^^^^^^^^^^^^^
+The import java.sql.Date is never used
+----------
+9. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 5)
+	import java.sql.DriverManager;
+	       ^^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.DriverManager is never used
+----------
+10. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 6)
+	import java.sql.PreparedStatement;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.PreparedStatement is never used
+----------
+11. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 7)
+	import java.sql.ResultSet;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.sql.ResultSet is never used
+----------
+12. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 8)
+	import java.sql.SQLException;
+	       ^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.SQLException is never used
+----------
+13. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 9)
+	import java.util.HashSet;
+	       ^^^^^^^^^^^^^^^^^
+The import java.util.HashSet is never used
+----------
+14. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 10)
+	import java.util.Set;
+	       ^^^^^^^^^^^^^
+The import java.util.Set is never used
+----------
+15. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 14)
+	import org.eclipse.jface.dialogs.MessageDialog;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.dialogs.MessageDialog is never used
+----------
+16. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 18)
+	import org.eclipse.swt.events.SelectionAdapter;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.events.SelectionAdapter is never used
+----------
+17. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 19)
+	import org.eclipse.swt.events.SelectionEvent;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.events.SelectionEvent is never used
+----------
+18. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 20)
+	import org.eclipse.swt.graphics.Image;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.graphics.Image is never used
+----------
+19. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\NewUserDialog.java (at line 30)
+	import cz.cuni.mff.javaui.budgetapp.database.DBData;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.database.DBData is never used
+----------
+----------
+20. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 3)
+	import java.sql.Connection;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.sql.Connection is never used
+----------
+21. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 4)
+	import java.sql.DriverManager;
+	       ^^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.DriverManager is never used
+----------
+22. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 5)
+	import java.sql.PreparedStatement;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.PreparedStatement is never used
+----------
+23. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 6)
+	import java.sql.ResultSet;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.sql.ResultSet is never used
+----------
+24. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 7)
+	import java.sql.SQLException;
+	       ^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.SQLException is never used
+----------
+25. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 8)
+	import java.util.ArrayList;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.util.ArrayList is never used
+----------
+26. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 9)
+	import java.util.Dictionary;
+	       ^^^^^^^^^^^^^^^^^^^^
+The import java.util.Dictionary is never used
+----------
+27. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 11)
+	import java.util.List;
+	       ^^^^^^^^^^^^^^
+The import java.util.List is never used
+----------
+28. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 16)
+	import org.eclipse.jface.dialogs.MessageDialog;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.dialogs.MessageDialog is never used
+----------
+29. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 20)
+	import org.eclipse.swt.layout.FillLayout;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.layout.FillLayout is never used
+----------
+30. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\OpenUserDialog.java (at line 29)
+	import cz.cuni.mff.javaui.budgetapp.database.DBData;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.database.DBData is never used
+----------
+----------
+31. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\RecordDialog.java (at line 7)
+	import java.util.Calendar;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.util.Calendar is never used
+----------
+32. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\dialogs\RecordDialog.java (at line 14)
+	import org.eclipse.swt.widgets.Button;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.widgets.Button is never used
+----------
+----------
+33. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\other\ShowGraphHandler.java (at line 6)
+	import org.eclipse.jface.dialogs.IInputValidator;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.dialogs.IInputValidator is never used
+----------
+34. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\other\ShowGraphHandler.java (at line 7)
+	import org.eclipse.jface.window.Window;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.window.Window is never used
+----------
+35. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\other\ShowGraphHandler.java (at line 10)
+	import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.database.DBManipulator is never used
+----------
+36. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\other\ShowGraphHandler.java (at line 11)
+	import cz.cuni.mff.javaui.budgetapp.dialogs.NewPeriodDialog;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.dialogs.NewPeriodDialog is never used
+----------
+----------
+37. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\period\AddPeriodHandler.java (at line 6)
+	import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.e4.ui.model.application.ui.basic.MPart is never used
+----------
+38. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\period\AddPeriodHandler.java (at line 7)
+	import org.eclipse.e4.ui.workbench.modeling.EPartService;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.e4.ui.workbench.modeling.EPartService is never used
+----------
+39. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\period\AddPeriodHandler.java (at line 9)
+	import org.eclipse.jface.dialogs.MessageDialog;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.dialogs.MessageDialog is never used
+----------
+----------
+40. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\period\DeletePeriodHandler.java (at line 7)
+	import org.eclipse.jface.window.Window;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.window.Window is never used
+----------
+----------
+41. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 3)
+	import java.io.File;
+	       ^^^^^^^^^^^^
+The import java.io.File is never used
+----------
+42. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 4)
+	import java.net.MalformedURLException;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.net.MalformedURLException is never used
+----------
+43. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 5)
+	import java.net.URL;
+	       ^^^^^^^^^^^^
+The import java.net.URL is never used
+----------
+44. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 10)
+	import java.sql.ResultSet;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.sql.ResultSet is never used
+----------
+45. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 12)
+	import java.sql.Statement;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.sql.Statement is never used
+----------
+46. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 13)
+	import java.util.ArrayList;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.util.ArrayList is never used
+----------
+47. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 14)
+	import java.util.Calendar;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.util.Calendar is never used
+----------
+48. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 15)
+	import java.util.List;
+	       ^^^^^^^^^^^^^^
+The import java.util.List is never used
+----------
+49. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 17)
+	import org.eclipse.core.runtime.IStatus;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.core.runtime.IStatus is never used
+----------
+50. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 18)
+	import org.eclipse.core.runtime.MultiStatus;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.core.runtime.MultiStatus is never used
+----------
+51. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 19)
+	import org.eclipse.core.runtime.Platform;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.core.runtime.Platform is never used
+----------
+52. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 20)
+	import org.eclipse.core.runtime.Status;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.core.runtime.Status is never used
+----------
+53. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 23)
+	import org.eclipse.e4.ui.model.application.ui.basic.MWindow;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.e4.ui.model.application.ui.basic.MWindow is never used
+----------
+54. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\NewUserHandler.java (at line 24)
+	import org.eclipse.jface.dialogs.ErrorDialog;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.dialogs.ErrorDialog is never used
+----------
+----------
+55. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\handlers\user\OpenUserHandler.java (at line 5)
+	import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.e4.ui.model.application.ui.basic.MPart is never used
+----------
+----------
+56. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\models\ChartData.java (at line 6)
+	import java.time.temporal.ChronoUnit;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.time.temporal.ChronoUnit is never used
+----------
+----------
+57. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\models\User.java (at line 3)
+	import java.util.Calendar;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.util.Calendar is never used
+----------
+58. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\models\User.java (at line 5)
+	import java.util.GregorianCalendar;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.util.GregorianCalendar is never used
+----------
+----------
+59. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\GraphPart.java (at line 13)
+	import cz.cuni.mff.javaui.budgetapp.misc.DataLoader;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.misc.DataLoader is never used
+----------
+60. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\GraphPart.java (at line 20)
+	import org.eclipse.swt.widgets.Canvas;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.widgets.Canvas is never used
+----------
+----------
+61. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\PeriodsPart.java (at line 12)
+	import javax.inject.Inject;
+	       ^^^^^^^^^^^^^^^^^^^
+The import javax.inject.Inject is never used
+----------
+62. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\PeriodsPart.java (at line 15)
+	import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.e4.ui.model.application.ui.basic.MPart is never used
+----------
+63. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\PeriodsPart.java (at line 16)
+	import org.eclipse.e4.ui.workbench.modeling.EPartService;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.e4.ui.workbench.modeling.EPartService is never used
+----------
+64. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\PeriodsPart.java (at line 26)
+	import org.eclipse.swt.widgets.Text;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.widgets.Text is never used
+----------
+65. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\PeriodsPart.java (at line 29)
+	import cz.cuni.mff.javaui.budgetapp.database.DBManipulator;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.database.DBManipulator is never used
+----------
+----------
+66. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\RecordInformationPart.java (at line 9)
+	import javax.inject.Inject;
+	       ^^^^^^^^^^^^^^^^^^^
+The import javax.inject.Inject is never used
+----------
+----------
+67. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 3)
+	import java.sql.Connection;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.sql.Connection is never used
+----------
+68. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 4)
+	import java.sql.DriverManager;
+	       ^^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.DriverManager is never used
+----------
+69. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 5)
+	import java.sql.PreparedStatement;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.PreparedStatement is never used
+----------
+70. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 6)
+	import java.sql.ResultSet;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.sql.ResultSet is never used
+----------
+71. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 7)
+	import java.sql.SQLException;
+	       ^^^^^^^^^^^^^^^^^^^^^
+The import java.sql.SQLException is never used
+----------
+72. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 8)
+	import java.util.HashMap;
+	       ^^^^^^^^^^^^^^^^^
+The import java.util.HashMap is never used
+----------
+73. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 9)
+	import java.util.Map;
+	       ^^^^^^^^^^^^^
+The import java.util.Map is never used
+----------
+74. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 12)
+	import javax.inject.Inject;
+	       ^^^^^^^^^^^^^^^^^^^
+The import javax.inject.Inject is never used
+----------
+75. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 15)
+	import org.eclipse.jface.dialogs.MessageDialog;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jface.dialogs.MessageDialog is never used
+----------
+76. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 17)
+	import org.eclipse.swt.graphics.Color;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.graphics.Color is never used
+----------
+77. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 20)
+	import org.eclipse.swt.widgets.Canvas;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.widgets.Canvas is never used
+----------
+78. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 22)
+	import org.eclipse.swt.widgets.Display;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.swt.widgets.Display is never used
+----------
+79. WARNING in C:\Users\Andrej\git\javaui\budgetApp\cz.cuni.mff.javaui.budgetApp\src\cz\cuni\mff\javaui\budgetapp\parts\UserInformationPart.java (at line 26)
+	import cz.cuni.mff.javaui.budgetapp.database.DBData;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import cz.cuni.mff.javaui.budgetapp.database.DBData is never used
+----------
+79 problems (79 warnings)

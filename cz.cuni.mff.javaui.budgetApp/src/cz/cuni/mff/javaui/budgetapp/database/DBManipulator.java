@@ -433,10 +433,15 @@ public class DBManipulator {
 	        MessageDialog.openError(shell, "Unable to connect", "The application was unable to connect to the database. Please try again later.");
 	        return null;
 	    }
-			
+    	
+    	String jdbcUrl = String.format(
+    		    "jdbc:mysql://google/%s?cloudSqlInstance=%s"
+    		        + "&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false",
+    		    DBData.database,
+    		    DBData.instance);
+    	
 	    try (Connection conn =
- 	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s",
- 	        		   DBData.host, DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
+ 	           DriverManager.getConnection(String.format(jdbcUrl, DBData.user, DBData.password))) {
 	        
 	        PreparedStatement ps = conn.prepareStatement("SELECT iduser, name FROM budget_db.user");
 	        ResultSet rs = ps.executeQuery();
