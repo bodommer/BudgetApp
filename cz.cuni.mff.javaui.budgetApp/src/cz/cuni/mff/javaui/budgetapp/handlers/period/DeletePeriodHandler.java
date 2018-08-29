@@ -30,7 +30,9 @@ public class DeletePeriodHandler {
 		if (MessageDialog.openQuestion(shell, "Delete Period",
 				"Deleting this period will delete all records belonging to it. Are you sure you want to delete it?")) {
 			DBManipulator.deletePeriod(DataLoader.getPeriods(application).getSelected(), shell);
+			DataLoader.getUserInfo(application).updateUserInfo(application, shell);
 			DataLoader.getPeriods(application).loadPeriods(application, shell);
+			DataLoader.getRecords(application).clearTable();
 		}
 	}
 }

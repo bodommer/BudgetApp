@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.inject.Inject;
 
@@ -431,6 +432,7 @@ public class DBManipulator {
 	        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 	    } catch (Exception ex) {
 	        MessageDialog.openError(shell, "Unable to connect", "The application was unable to connect to the database. Please try again later.");
+	        ex.printStackTrace();
 	        return null;
 	    }
     	
@@ -441,7 +443,7 @@ public class DBManipulator {
     		    DBData.instance);
     	
 	    try (Connection conn =
- 	           DriverManager.getConnection(String.format(jdbcUrl, DBData.user, DBData.password))) {
+ 	           DriverManager.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s", DBData.host, DBData.database, DBData.user, DBData.password))) {
 	        
 	        PreparedStatement ps = conn.prepareStatement("SELECT iduser, name FROM budget_db.user");
 	        ResultSet rs = ps.executeQuery();
@@ -466,7 +468,7 @@ public class DBManipulator {
 	 * 
 	 * @param application
 	 * @param shell
-	 * @return Returns ChartData class isntance or null if transaction failed.
+	 * @return Returns ChartData class instance or null if transaction failed.
 	 */
 	public static ChartData getChartData(MApplication application, Shell shell) {
 		try {
@@ -480,7 +482,7 @@ public class DBManipulator {
 				.getConnection(String.format("jdbc:mysql://%s/%s?user=%s&password=%s&serverTimezone=%s", DBData.host,
 						DBData.database, DBData.user, DBData.password, DBData.serverTimeZone))) {
 			PreparedStatement ps = conn.prepareStatement(
-					"SELECT MIN(records.date_added) AS min, MAX(records.date_added)AS max FROM (SELECT * FROM budget_db.record WHERE idperiod=? GROUP BY date_added) AS records");
+					"SELECT MIN(records.date_added) AS min, MAX(records.date_added)AS max FROM (SELECT * FROM budget_db.record WHERE idperiod=?) AS records");
 			ps.setInt(1, DataLoader.getPeriod(application));
 			System.out.println(DataLoader.getPeriod(application) + " period");
 			ResultSet rs = ps.executeQuery();
